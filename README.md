@@ -3,8 +3,8 @@
 A dark-theme, web-based interactive prototype for an OKX quantitative trading terminal built with Next.js + React + TypeScript + Tailwind CSS.
 
 ## Stack
-- Next.js 14 (App Router)
-- React 18 + TypeScript
+- Next.js 16 (App Router)
+- React 19 + TypeScript
 - Tailwind CSS
 - TradingView Lightweight Charts (candlestick + BUY/SELL markers)
 
