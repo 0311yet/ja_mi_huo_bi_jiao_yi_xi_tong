@@ -1,13 +1,14 @@
-import { Settings } from "lucide-react";
+import { Plus, Settings } from "lucide-react";
 import { StatusBadge } from "@/components/StatusBadge";
 
 interface DashboardHeaderProps {
   onOpenSettings: () => void;
+  onCreateStrategy: () => void;
 }
 
-export function DashboardHeader({ onOpenSettings }: DashboardHeaderProps) {
+export function DashboardHeader({ onOpenSettings, onCreateStrategy }: DashboardHeaderProps) {
   return (
-    <header className="mb-8 flex items-center justify-between">
+    <header className="mb-8 flex items-center justify-between gap-4">
       <div className="flex items-center gap-4">
         <button
           onClick={onOpenSettings}
@@ -17,7 +18,14 @@ export function DashboardHeader({ onOpenSettings }: DashboardHeaderProps) {
         </button>
         <span className="text-3xl font-bold tracking-wide">OKX QUANT SYSTEM</span>
       </div>
-      <StatusBadge text="System Online" online />
+
+      <div className="flex items-center gap-3">
+        <button onClick={onCreateStrategy} className="inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2 font-semibold text-white hover:brightness-110">
+          <Plus className="h-4 w-4" />
+          创建策略
+        </button>
+        <StatusBadge text="System Online" online />
+      </div>
     </header>
   );
 }

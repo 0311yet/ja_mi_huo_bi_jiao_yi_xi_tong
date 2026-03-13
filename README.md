@@ -26,7 +26,7 @@ Open `http://localhost:3000`.
 
 ## Features
 - Dark, trading-terminal style UI
-- Profit chart with `1D / 1W / 1M / ALL` time range switching
+- Profit chart with `1D / 1W / 1M / ALL` time range switching (OKX public market candles)
 - AI and Strategy mode cards with ROI stats
 - Trading detail page with:
   - Candlestick chart
@@ -34,6 +34,8 @@ Open `http://localhost:3000`.
   - OHLC + indicators header
   - Performance panel + execution log
 - Settings modal with localStorage persistence
+- Dashboard top-right `创建策略` modal (AI / Strategy + 实盘 / 模拟盘 + 交易对选择)
+- Realtime pair data panels for `BTC-USDT` / `ETH-USDT` (empty state when API has no data)
 
 ## Project Structure
 ```text

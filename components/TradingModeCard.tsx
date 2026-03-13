@@ -12,7 +12,7 @@ export function TradingModeCard({ data }: TradingModeCardProps) {
 
   return (
     <Link
-      href={`/trading/${data.id}`}
+      href={`/trading/${data.id}?pair=BTC-USDT&accountMode=paper`}
       className="rounded-2xl border border-white/15 bg-white/[0.03] p-6 transition hover:-translate-y-0.5 hover:border-accent"
     >
       <div className="mb-6 flex items-start justify-between">

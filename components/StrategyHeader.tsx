@@ -5,9 +5,10 @@ interface StrategyHeaderProps {
   strategyName: string;
   market: string;
   status: string;
+  accountMode: "paper" | "live";
 }
 
-export function StrategyHeader({ strategyName, market, status }: StrategyHeaderProps) {
+export function StrategyHeader({ strategyName, market, status, accountMode }: StrategyHeaderProps) {
   return (
     <header className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-4">
       <div className="flex items-center gap-4">
@@ -20,6 +21,9 @@ export function StrategyHeader({ strategyName, market, status }: StrategyHeaderP
           <div className="flex items-center gap-3">
             <h1 className="text-4xl font-bold">{strategyName}</h1>
             <span className="rounded-md bg-profit/15 px-3 py-1 text-sm font-semibold text-profit">{status}</span>
+            <span className={`rounded-md px-3 py-1 text-sm font-semibold ${accountMode === "live" ? "bg-danger/20 text-danger" : "bg-accent/20 text-accent"}`}>
+              {accountMode === "live" ? "实盘" : "模拟盘"}
+            </span>
           </div>
           <p className="mt-1 text-slate-400">{market}</p>
         </div>

@@ -1,4 +1,6 @@
 export type TimeRange = "1D" | "1W" | "1M" | "ALL";
+export type StrategyMode = "ai" | "strategy";
+export type AccountMode = "paper" | "live";
 
 export interface ProfitPoint {
   time: string;
@@ -6,7 +8,7 @@ export interface ProfitPoint {
 }
 
 export interface TradingModeSummary {
-  id: "ai" | "strategy";
+  id: StrategyMode;
   title: string;
   subtitle: string;
   investment: number;
@@ -44,7 +46,7 @@ export interface StrategyMetrics {
 }
 
 export interface StrategyDetail {
-  mode: "ai" | "strategy";
+  mode: StrategyMode;
   strategyName: string;
   market: string;
   status: "Running" | "Stopped";
@@ -60,4 +62,13 @@ export interface StrategyDetail {
   signals: TradeSignal[];
   metrics: StrategyMetrics;
   logs: ExecutionLogItem[];
+}
+
+export interface PairTicker {
+  instId: string;
+  last: number;
+  open24h: number;
+  change24hPct: number;
+  vol24h: number;
+  ts: number;
 }
