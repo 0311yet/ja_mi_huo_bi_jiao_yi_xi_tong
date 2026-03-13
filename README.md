@@ -14,6 +14,8 @@ npm install
 npm run dev
 ```
 
+`npm run dev` now auto-cleans stale `.next` cache and removes legacy `app/(auth)` login route if both route definitions exist.
+
 Open `http://localhost:3000`.
 
 ## Routes
@@ -51,5 +53,6 @@ styles/
 
 ## Troubleshooting
 - If you still see `You cannot have two parallel pages that resolve to the same path` for `/(auth)/login` and `/login`, it is usually stale Next cache from a previous build.
-- Run: `npm run dev:clean` (or manually `rm -rf .next && npm run dev`).
+- `npm run dev` now runs an automatic prepare step to clear stale `.next` cache and remove legacy `app/(auth)` login route if detected.
+- You can still run: `npm run dev:clean` (or manually `rm -rf .next && npm run dev`).
 - Confirm there is only one login page file: `app/login/page.tsx`.
