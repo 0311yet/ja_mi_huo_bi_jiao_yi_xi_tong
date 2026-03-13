@@ -9,7 +9,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "dev:clean": "rm -rf .next && next dev",
+    "clean": "rm -rf .next node_modules"
   },
   "dependencies": {
     "clsx": "^2.1.1",

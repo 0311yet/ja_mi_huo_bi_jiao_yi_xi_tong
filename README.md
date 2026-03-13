@@ -47,3 +47,9 @@ utils/
 public/
 styles/
 ```
+
+
+## Troubleshooting
+- If you still see `You cannot have two parallel pages that resolve to the same path` for `/(auth)/login` and `/login`, it is usually stale Next cache from a previous build.
+- Run: `npm run dev:clean` (or manually `rm -rf .next && npm run dev`).
+- Confirm there is only one login page file: `app/login/page.tsx`.
