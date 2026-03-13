@@ -36,7 +36,7 @@ Open `http://localhost:3000`.
 ## Project Structure
 ```text
 app/
-  (auth)/login/
+  login/
   dashboard/
   trading/[mode]/
 components/
